@@ -82,43 +82,86 @@ void Sleeping3Tier::UnitTestSleeping3Tier()
 //Unit Tests for concrete classes Starts///
 void SecondSitting::UnitTestSecondSitting()
 {
-    SecondSitting lo;
+
+    const SecondSitting &lo = SecondSitting::Type();
+    const SecondSitting &lo_ = SecondSitting::Type();
+
+    // check for singleton
+    std::cout<<(((&lo != &lo_)?"Not Singleton":"Singleton"))<<std::endl;
+
+    //check output operator
     std::cout << lo << std::endl;
 }
 
 void ACChairCar::UnitTestACChairCar()
 {
-    ACChairCar lo;
+    
+    const ACChairCar &lo = ACChairCar::Type();
+    const ACChairCar &lo_ = ACChairCar::Type();
+
+    // check for singleton
+    std::cout<<(((&lo != &lo_)?"Not Singleton":"Singleton"))<<std::endl;
+
+    //check output operator
     std::cout << lo << std::endl;
 }
-
 void ACFirstClass::UnitTestACFirstClass()
 {
-    ACFirstClass lo;
+    const ACFirstClass &lo = ACFirstClass::Type();
+    const ACFirstClass &lo_ = ACFirstClass::Type();
+
+    // check for singleton
+    std::cout<<(((&lo != &lo_)?"Not Singleton":"Singleton"))<<std::endl;
+
+    //check output operator
     std::cout << lo << std::endl;
 }
 
 void AC2Tier::UnitTestAC2Tier()
 {
-    AC2Tier lo;
+    const AC2Tier &lo = AC2Tier::Type();
+    const AC2Tier &lo_ = AC2Tier::Type();
+
+    // check for singleton
+    std::cout<<(((&lo != &lo_)?"Not Singleton":"Singleton"))<<std::endl;
+
+    //check output operator
     std::cout << lo << std::endl;
 }
 
 void FirstClass::UnitTestFirstClass()
 {
-    FirstClass lo;
+    const FirstClass &lo = FirstClass::Type();
+    const FirstClass &lo_ = FirstClass::Type();
+
+    // check for singleton
+    std::cout<<(((&lo != &lo_)?"Not Singleton":"Singleton"))<<std::endl;
+
+    //check output operator
     std::cout << lo << std::endl;
 }
 
 void AC3Tier::UnitTestAC3Tier()
 {
-    AC3Tier lo;
+    const AC3Tier &lo = AC3Tier::Type();
+    const AC3Tier &lo_ = AC3Tier::Type();
+
+    // check for singleton
+    std::cout<<(((&lo != &lo_)?"Not Singleton":"Singleton"))<<std::endl;
+
+    //check output operator
     std::cout << lo << std::endl;
 }
 
 void Sleeper::UnitTestSleeper()
 {
-    Sleeper lo;
+    const Sleeper &lo = Sleeper::Type();
+    const Sleeper &lo_ = Sleeper::Type();
+
+    // check for singleton
+    std::cout<<(((&lo != &lo_)?"Not Singleton":"Singleton"))<<std::endl;
+
+    //check output operator
     std::cout << lo << std::endl;
 }
 //Unit Tests for concrete classes ends///

@@ -16,6 +16,7 @@ Tiers: 2
 Unit Testing Sleeping3Tier
 Sitting: No
 Tiers: 3
+Singleton
 SecondSitting
 AC: No
 Sitting: Yes
@@ -23,6 +24,7 @@ Luxury: No
 Tiers: 0
 Load Factor: 0.5
 
+Singleton
 ACChairCar
 AC: Yes
 Sitting: Yes
@@ -30,6 +32,7 @@ Luxury: No
 Tiers: 0
 Load Factor: 1.25
 
+Singleton
 ACFirstClass
 AC: Yes
 Sitting: No
@@ -37,6 +40,7 @@ Luxury: Yes
 Tiers: 2
 Load Factor: 3
 
+Singleton
 AC2Tier
 AC: Yes
 Sitting: No
@@ -44,6 +48,7 @@ Luxury: No
 Tiers: 2
 Load Factor: 2
 
+Singleton
 FirstClass
 AC: No
 Sitting: No
@@ -51,6 +56,7 @@ Luxury: Yes
 Tiers: 2
 Load Factor: 2
 
+Singleton
 AC3Tier
 AC: Yes
 Sitting: No
@@ -58,6 +64,7 @@ Luxury: No
 Tiers: 3
 Load Factor: 1.75
 
+Singleton
 Sleeper
 AC: No
 Sitting: No

@@ -123,3 +123,33 @@ Number | Header File | Unit Test Implementation
 ```
 
 
+## Booking Class ##
+
+1. Checked Non Concrete Classes, I did this by passing a relevant derieved concrete class to a non concrete class reference  checking `NumTiers_` and `Berth_`
+```cpp
+    // (from BookingClass.cpp)
+    void SittingClass::UnitTestSittingClass()
+    {
+        std::cout << "Unit Testing SittingClass" << std::endl;
+        SecondSitting a1;
+        SittingClass &ut1 = a1;
+        std::cout << "Sitting: " << (ut1.IsSitting() ? "Yes" : "No") << "\n";
+        std::cout << "Tiers: " << ut1.GetNumberOfTiers() << "\n";
+    }
+```
+2. Checked Concrete Classes attributes via the  output operator and singleton property 
+```cpp
+    // (from BookingClass.cpp)    
+    void AC3Tier::UnitTestAC3Tier()
+    {
+        const AC3Tier &lo = AC3Tier::Type();
+        const AC3Tier &lo_ = AC3Tier::Type();
+
+        // check for singleton
+        std::cout<<(((&lo != &lo_)?"Not Singleton":"Singleton"))<<std::endl;
+
+        //check output operator
+        std::cout << lo << std::endl;
+    }
+```
+
