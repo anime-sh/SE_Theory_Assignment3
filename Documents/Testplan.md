@@ -156,3 +156,7 @@ Go to `../Source/TestingScripts/` and run the relevant bash script, the script c
     }
 ```
 
+## Application Testing ##
+1. Provided tests: ran the code given in section C, **CHANGED BookingClasses to BookingClass** (please refer to ../Source/README.md for more info). Use the script `../Source/TestingScripts/testing.sh` for running these tests.
+2. Custom tests: Checked the bookings for 28 cases (2 x 2) stations and all 7 booking classes.  Use the script `../Source/TestingScripts/customtesting.sh` for running these tests.
+    
