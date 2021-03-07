@@ -60,7 +60,7 @@ Number | Header File | Unit Test Implementation
 2. Checked list of stations (and output operator)
 3. Checked distances between stations (and output operator)
 ```cpp
-    // (from railways.cpp)
+    // (from Railways.cpp)
     void Railways::UnitTestRailways()
     { 
         //get instance
@@ -72,5 +72,33 @@ Number | Header File | Unit Test Implementation
         
         //check output operator
         std::cout << Railways::IndianRailways() << std::endl;  //POINT 2 and 3
+    }
+```
+
+## Station ##
+
+1. Checked constructor and copy constructor
+1. Checked output operator
+1. Checked method GetName()
+1. Checked method GetDistance()
+
+```cpp
+    // (from Station.cpp)
+    void Station::UnitTestStation()
+    {
+        // Check Constructors POINT 1
+        Station s1("Mumbai");
+        Station s2(s1);
+
+        //check output stream operator POINT 2
+        std::cout << s1;
+        std::cout << s2;
+
+        //check GetName POINT 3
+        std::cout << s1.GetName() << " " << s2.GetName() << std::endl;
+
+        //Check GetDistance POINT 4
+        std::cout << "Distance between Mumbai and Delhi " << s1.GetDistance("Delhi") << std::endl;
+        std::cout << "Distance between Mumbai and Chennai " << s2.GetDistance("Chennai") << std::endl;
     }
 ```
