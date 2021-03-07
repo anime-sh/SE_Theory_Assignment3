@@ -1,0 +1,67 @@
+Unit Testing BookingClass
+Sitting: No
+Tiers: 2
+Unit Testing SittingClass
+Sitting: Yes
+Tiers: 0
+Unit Testing SleepingClass
+Sitting: No
+Tiers: 2
+Unit Testing Sitting0Tier
+Sitting: Yes
+Tiers: 0
+Unit Testing Sleeping2Tier
+Sitting: No
+Tiers: 2
+Unit Testing Sleeping3Tier
+Sitting: No
+Tiers: 3
+SecondSitting
+AC: No
+Sitting: Yes
+Luxury: No
+Tiers: 0
+Load Factor: 0.5
+
+ACChairCar
+AC: Yes
+Sitting: Yes
+Luxury: No
+Tiers: 0
+Load Factor: 1.25
+
+ACFirstClass
+AC: Yes
+Sitting: No
+Luxury: Yes
+Tiers: 2
+Load Factor: 3
+
+AC2Tier
+AC: Yes
+Sitting: No
+Luxury: No
+Tiers: 2
+Load Factor: 2
+
+FirstClass
+AC: No
+Sitting: No
+Luxury: Yes
+Tiers: 2
+Load Factor: 2
+
+AC3Tier
+AC: Yes
+Sitting: No
+Luxury: No
+Tiers: 3
+Load Factor: 1.75
+
+Sleeper
+AC: No
+Sitting: No
+Luxury: No
+Tiers: 3
+Load Factor: 1
+

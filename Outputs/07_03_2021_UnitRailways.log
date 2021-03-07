@@ -1,0 +1,30 @@
+Stations:
+1) Mumbai
+2) Delhi
+3) Bangalore
+4) Kolkata
+5) Chennai
+
+ Distances:
+1) [ From: Bangalore, To: Chennai ] = 350
+2) [ From: Bangalore, To: Delhi ] = 2150
+3) [ From: Bangalore, To: Kolkata ] = 1871
+4) [ From: Bangalore, To: Mumbai ] = 981
+5) [ From: Chennai, To: Bangalore ] = 350
+6) [ From: Chennai, To: Delhi ] = 2180
+7) [ From: Chennai, To: Kolkata ] = 1659
+8) [ From: Chennai, To: Mumbai ] = 1338
+9) [ From: Delhi, To: Bangalore ] = 2150
+10) [ From: Delhi, To: Chennai ] = 2180
+11) [ From: Delhi, To: Kolkata ] = 1472
+12) [ From: Delhi, To: Mumbai ] = 1447
+13) [ From: Kolkata, To: Bangalore ] = 1871
+14) [ From: Kolkata, To: Chennai ] = 1659
+15) [ From: Kolkata, To: Delhi ] = 1472
+16) [ From: Kolkata, To: Mumbai ] = 2014
+17) [ From: Mumbai, To: Bangalore ] = 981
+18) [ From: Mumbai, To: Chennai ] = 1338
+19) [ From: Mumbai, To: Delhi ] = 1447
+20) [ From: Mumbai, To: Kolkata ] = 2014
+
+
