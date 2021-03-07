@@ -7,7 +7,7 @@
 // Header file codes
 #include <ostream>
 #include <string>
-class BookingClass
+class BookingClass  // base class 
 {
 
     const bool Berth_;
@@ -26,7 +26,7 @@ public:
     static void UnitTestBookingClass();
 };
 
-class SittingClass : public BookingClass
+class SittingClass : public BookingClass  //non concrete
 {
 public:
     SittingClass(const int &NumTiers) : BookingClass(false, NumTiers) {}
@@ -34,7 +34,7 @@ public:
     static void UnitTestSittingClass();
 };
 
-class SleepingClass : public BookingClass
+class SleepingClass : public BookingClass //non concrete
 {
 public:
     SleepingClass(const int &NumTiers) : BookingClass(true, NumTiers) {}
@@ -42,14 +42,14 @@ public:
     static void UnitTestSleepingClass();
 };
 
-class Sitting0Tier : public SittingClass
+class Sitting0Tier : public SittingClass //non concrete
 {
 public:
     Sitting0Tier() : SittingClass(0) {}
     ~Sitting0Tier() {}
     static void UnitTestSitting0Tier();
 };
-class SecondSitting : public Sitting0Tier
+class SecondSitting : public Sitting0Tier  //leaf class
 {
 public:
     SecondSitting() : Sitting0Tier() {}
@@ -65,7 +65,7 @@ public:
     }
     static void UnitTestSecondSitting();
 };
-class ACChairCar : public Sitting0Tier
+class ACChairCar : public Sitting0Tier //leaf class
 {
 public:
     ACChairCar() : Sitting0Tier() {}
@@ -82,14 +82,14 @@ public:
     static void UnitTestACChairCar();
 };
 
-class Sleeping2Tier : public SleepingClass
+class Sleeping2Tier : public SleepingClass //non concrete
 {
 public:
     Sleeping2Tier() : SleepingClass(2) {}
     ~Sleeping2Tier() {}
     static void UnitTestSleeping2Tier();
 };
-class ACFirstClass : public Sleeping2Tier
+class ACFirstClass : public Sleeping2Tier //leaf class
 {
 public:
     ACFirstClass() : Sleeping2Tier() {}
@@ -105,7 +105,7 @@ public:
     }
     static void UnitTestACFirstClass();
 };
-class AC2Tier : public Sleeping2Tier
+class AC2Tier : public Sleeping2Tier //leaf class
 {
 public:
     AC2Tier() : Sleeping2Tier() {}
@@ -121,7 +121,7 @@ public:
     }
     static void UnitTestAC2Tier();
 };
-class FirstClass : public Sleeping2Tier
+class FirstClass : public Sleeping2Tier //leaf class
 {
 public:
     FirstClass() : Sleeping2Tier() {}
@@ -138,14 +138,14 @@ public:
     static void UnitTestFirstClass();
 };
 
-class Sleeping3Tier : public SleepingClass
+class Sleeping3Tier : public SleepingClass //non concrete
 {
 public:
     Sleeping3Tier() : SleepingClass(3) {}
     ~Sleeping3Tier() {}
     static void UnitTestSleeping3Tier();
 };
-class AC3Tier : public Sleeping3Tier
+class AC3Tier : public Sleeping3Tier //leaf class
 {
 public:
     AC3Tier() : Sleeping3Tier() {}
@@ -161,7 +161,7 @@ public:
     }
     static void UnitTestAC3Tier();
 };
-class Sleeper : public Sleeping3Tier
+class Sleeper : public Sleeping3Tier //leaf class
 {
 public:
     Sleeper() : Sleeping3Tier() {}

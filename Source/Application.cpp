@@ -7,6 +7,8 @@
 #include "BookingClass.h"
 #include "Booking.h"
 
+
+// Have initialised static data here using the values given in the pdf
 int Booking::sBookingPNRSerial = 1;
 double Booking::sBaseFarePerKM = 0.50;
 double Booking::sACSurcharge = 50.00;
