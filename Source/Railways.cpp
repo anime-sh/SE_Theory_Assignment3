@@ -1,7 +1,7 @@
 // Name: Animesh Jha
 // Roll Number: 19CS10070
 #include "Railways.h"
-#include<iostream>
+#include <iostream>
 Railways::Railways() {}
 Railways::~Railways() {}
 std::ostream &operator<<(std::ostream &os, const Railways &IR)
@@ -34,5 +34,13 @@ double Railways::GetDistance(const std::string &from, const std::string &to) con
 }
 void Railways::UnitTestRailways()
 {
-    std::cout<<Railways::IndianRailways()<<std::endl;
+    //get instance
+    const Railways &instance = Railways::IndianRailways();
+    
+    // check for singleton property
+    const Railways &instanceCopy = Railways::IndianRailways();
+    std::cout << ((&instance != &instanceCopy)?"Not a Singleton":"Singleton") << std::endl;
+    
+    //check output operator
+    std::cout << Railways::IndianRailways() << std::endl;
 }

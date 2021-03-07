@@ -2,7 +2,7 @@
 ### Animesh Jha  19CS10070 ###
 (Assuming all input is correct, haven't implemented exception and error handling)
 
-NOTE: All checking is done against golden outputs, the unit testing code by itself doesnt check correctness, to automate the checking I have provided bash scripts under `../Source/TestingScripts`
+NOTE: All checking is done against golden outputs, the unit testing code by itself **doesnt** check correctness, to automate the checking I have provided bash scripts under `../Source/TestingScripts`
 # Unit Tests Source Files #
 Number | Header File | Unit Test Implementation
 | :--- | :--- | :---
@@ -54,5 +54,23 @@ Number | Header File | Unit Test Implementation
     }
 ```
 
-## Booking Classes ##
+## Railways ##
 
+1. Checked for singleton property
+2. Checked list of stations (and output operator)
+3. Checked distances between stations (and output operator)
+```cpp
+    // (from railways.cpp)
+    void Railways::UnitTestRailways()
+    { 
+        //get instance
+        const Railways &instance = Railways::IndianRailways();
+        
+        // check for singleton property
+        const Railways &instanceCopy = Railways::IndianRailways();
+        std::cout << ((&instance != &instanceCopy)?"Not a Singleton":"Singleton") << std::endl;  // POINT 1
+        
+        //check output operator
+        std::cout << Railways::IndianRailways() << std::endl;  //POINT 2 and 3
+    }
+```
