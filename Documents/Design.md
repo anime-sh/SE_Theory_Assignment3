@@ -122,3 +122,64 @@ The following guidelines were adhered to while coding:
         1. `double GetDistance(const std::string &, const std::string &) const` :   returns distance between two stations
         1. `friend std::ostream &operator<<(std::ostream &, const Railways &)` : implements output streaming
         1. `static void UnitTestRailways()` : implements unit tests
+
+
+## Booking Class ##
+
+### Designing the Hierachy ###   
+1. Berth, AC, and NumberOfTiers will not change with time
+2. LoadFactors and Luxury may change from time to time
+3. Therefore, Berth and its closest associate NumberOfTiers are the best candidates for the hierarchy design
+
+### Members and Methods ###
+1. Berth and NumberOfTiers are data members of the abstract base class `BookingClass`
+2. Other attributes (AC, LoadFactor, Luxury, Name) are implemented via methods, these methods are pure virtual in the abstract base class, and are implemented by the concrete classes
+3. The output operator is implemented for the abstact base class
+4. static functions for unit testing are provided for each class
+
+### Hierachy ###
+1. BookingClass
+    1. SittingClass
+        1. Sitting0Tier
+            1. ACChairCar
+            1. SecondSitting
+    1. SleepingClass
+        1. Sleeping2Tier
+            1. ACFirstClass
+            1. AC2Tier
+            1. FirstClass
+        1. Sleeping3Tier
+            1. AC3Tier
+            1. Sleeper
+
+### BookingClass ###
+1. Members
+    1. Private
+        1. `const bool Berth_`  : Berth/Sitting
+        1. `const int NumTiers_`: NumberOfTiers
+1. Methods
+    1. Public:
+        1. `BookingClass(const bool &Berth, const int &NumTiers)` : Constructor
+        1. `virtual ~BookingClass()` : Virtual Destructor
+        1. `virtual std::string GetName() const = 0`: Pure virtual function to return Name
+        1. `virtual bool IsAC() const = 0`: Pure virtual function to return AC/NonAC
+        1. `virtual bool IsLuxury() const = 0`: Pure virtual function to return Luxury/NonLuxury
+        1. `virtual double GetLoadFactor() const = 0`: : Pure virtual function to return LoadFactor
+        1. `bool IsSitting() const`: Concrete function returns `!Berth_`
+        1. `int GetNumberOfTiers() const`: Concrete function returns `NumTier_`
+        1. `friend std::ostream &operator<<(std::ostream &os, const BookingClass &lo)`: Implements output stream for all classes in this hierachy
+        1. `static void UnitTestBookingClass()`: Unit Tests this class
+
+### SittingClass (Publicly inherits BookingClass) ###
+1. Methods
+    1. Public:
+        1. `SittingClass(const int &NumTiers)` : Constructor
+        2. `~SittingClass()` : Destructor
+        1. `static void UnitTestSittingClass()`: Unit Tests this class
+
+### SleepingClass (Publicly inherits BookingClass) ###
+1. Methods
+    1. Public:
+        1. `SleepingClass(const int &NumTiers)` : Constructor
+        2. `~SleepingClass()` : Destructor
+        1. `static void UnitTestSleepingClass()`: Unit Tests this class
