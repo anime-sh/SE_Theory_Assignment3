@@ -88,18 +88,38 @@ The following guidelines were adhered to while coding:
 
 ## Date ##
 1. Static Members:
-    1. `static const std::vector<std::string> sDays` : vector of strings with day names
-    1. `static const std::vector<std::string> sMonths` : vector of strings with month names
+    1. Private:
+        1. `static const std::vector<std::string> sDays` : vector of strings with day names
+        1. `static const std::vector<std::string> sMonths` : vector of strings with month names
 2. Non Static Members:
-    1. `unsigned int date_` : DD part of the date object
-    1. `unsigned int month_` : MM part of the date object
-    1. `unsigned int year_` :YYYY part of the date object
+    1. Private:
+        1. `unsigned int date_` : DD part of the date object
+        1. `unsigned int month_` : MM part of the date object
+        1. `unsigned int year_` :YYYY part of the date object
 3. Methods: 
-    1. `Date(unsigned int, unsigned int, unsigned int)`: Constructor
-    1. `Date(const Date &)` : Copy Constructor
-    1. `~Date()` : Destructor
-    1. `friend std::ostream &operator<<(std::ostream &, const Date &)` : implements output streaming
-    1. `static void UnitTestDate()`: implements unit test
+    1. Public:
+        1. `Date(unsigned int, unsigned int, unsigned int)`: Constructor
+        1. `Date(const Date &)` : Copy Constructor
+        1. `~Date()` : Destructor
+        1. `friend std::ostream &operator<<(std::ostream &, const Date &)` : implements output streaming
+        1. `static void UnitTestDate()`: implements unit test
 
-
-
+## Railways (singleton) ##
+1. Static Members:
+    1. Private:
+        1. `static const std::vector<Station> sStations` : List of Stations
+        1. `static const std::map<std::pair<std::string, std::string>, double> sDistStations` : Stores distance between two stations
+2. Methods:
+    1. Private:
+        1. `static std::vector<Station> InitSta()` : initialise stations
+        1. `static std::map<std::pair<std::string, std::string>, double> InitDis()` : initialises distances between stations
+        1. `Railways()` : private constructor for singleton
+        1. `~Railways()`: private destructor for singleton
+    2. Public: 
+        1. `Railways(Railways &) = delete` : c++11 code
+        1. `void operator=(const Railways &) = delete` : c++11 code 
+        1. `static const Railways &IndianRailways()` : singleton implementation
+        1. `double GetDistance(const Station &, const Station &) const` : returns distance between two stations
+        1. `double GetDistance(const std::string &, const std::string &) const` :   returns distance between two stations
+        1. `friend std::ostream &operator<<(std::ostream &, const Railways &)` : implements output streaming
+        1. `static void UnitTestRailways()` : implements unit tests
