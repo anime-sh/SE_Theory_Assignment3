@@ -1,6 +1,8 @@
 # Test Plan #
 ### Animesh Jha  19CS10070 ###
 (Assuming all input is correct, haven't implemented exception and error handling)
+
+NOTE: All checking is done against golden outputs, the unit testing code by itself doesnt check correctness, to automate the checking I have provided bash scripts under `../Source/TestingScripts`
 # Unit Tests Source Files #
 Number | Header File | Unit Test Implementation
 | :--- | :--- | :---
@@ -13,7 +15,7 @@ Number | Header File | Unit Test Implementation
 
 # Class-wise Scenario Description
 
-## Booking
+## Booking ##
 1. Checked working of constructor with all possible Booking Classes 
 ```cpp
     // (from customtesting.cpp)
@@ -26,7 +28,7 @@ Number | Header File | Unit Test Implementation
     Booking lo0_6(FromS[0], ToS[0], Date(1, 1, 2021), Sleeper::Type());
     // ... 
 ```
-1. Checked output (operator << )
+2. Checked output (output stream and pnr, fare calculation )
 ```cpp
     // (from Booking.cpp)
     void Booking::UnitTestBooking()
@@ -36,7 +38,7 @@ Number | Header File | Unit Test Implementation
         std::cout << b1 << std::endl; // RELEVANT LINE
     // ...
 ```
-1. Checked if static members and other data members not displayed in output (`BookingStatus_`) are correctly initialised
+3. Checked if static members are correctly initialised and other data members not displayed in output (`BookingStatus_`) are correctly initialised
 ```cpp
     // (from Booking.cpp)
     void Booking::UnitTestBooking()
@@ -51,4 +53,6 @@ Number | Header File | Unit Test Implementation
         std::cout << "sBookingPNRSerial = " << Booking::sBookingPNRSerial << "\n";
     }
 ```
-1. checking the booking data stored in sbookings (static vector<booking*>)
+
+## Booking Classes ##
+
