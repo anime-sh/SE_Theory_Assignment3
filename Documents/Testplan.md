@@ -102,3 +102,24 @@ Number | Header File | Unit Test Implementation
         std::cout << "Distance between Mumbai and Chennai " << s2.GetDistance("Chennai") << std::endl;
     }
 ```
+
+## Date ##
+
+1. Checked Constructor
+1. Checked copy constructor
+1. Checked output operator
+
+```cpp
+    // (from Date.cpp)
+    void Date::UnitTestDate()
+    {
+        //checking constructors 
+        Date d1(30, 8, 2001); //POINT 1
+        Date d2(d1); //POINT 2
+
+        //checking output stream
+        std::cout << d1 << " " << d2 << std::endl; //POINT 3
+    }
+```
+
+
