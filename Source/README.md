@@ -5,13 +5,13 @@ This directory contains the source code, unit tests and testing scripts for Soft
 NOTE: In my solution I have used  `BookingClass` instead of `BookingClasses` please note the difference while evaluating
 Number | File Name | Content
 | :--- | :--- | :---
-1 | TestingScripts/testing.sh | Runs the file testing.cpp which contains the test given in Section C, stores the output at `../Outputs/MM_DD_YYYY_testing.log` and compares it with the golden output present at `../Outputs/GoldenOutput/testing.log`
-2 | TestingScripts/UnitTestBooking.sh | Runs the unit test for the `class Booking`, stores the output at `../Outputs/MM_DD_YYYY_UnitTestBooking.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestBooking.log`
-3 | TestingScripts/UnitTestBookingClass.sh | Runs the unit test for the `class BookingClass`, stores the output at `../Outputs/MM_DD_YYYY_UnitTestBookingClass.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestBookingClass.log`
-4 | TestingScripts/UnitTestDate.sh | Runs the unit test for the `class Date`, stores the output at `../Outputs/MM_DD_YYYY_UnitTestDate.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestDate.log`
-5 | TestingScripts/UnitTestRailways.sh | Runs the unit test for the `class Railways`, stores the output at `../Outputs/MM_DD_YYYY_UnitTestRailways.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestRailways.log`
-6 | TestingScripts/UnitTestStation.sh | Runs the unit test for the `class Station`, stores the output at `../Outputs/MM_DD_YYYY_UnitTestStation.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestStation.log`
-7 | TestingScripts/customtesting.sh | Runs the file customtesting.cpp which contains a custom test, stores the output at `../Outputs/MM_DD_YYYY_customtesting.log` and compares it with the golden output present at `../Outputs/GoldenOutput/customtesting.log`
+1 | TestingScripts/testing.sh | Runs the file testing.cpp which contains the test given in Section C, stores the output at `../Outputs/DD_MM_YYYY_testing.log` and compares it with the golden output present at `../Outputs/GoldenOutput/testing.log`
+2 | TestingScripts/UnitTestBooking.sh | Runs the unit test for the `class Booking`, stores the output at `../Outputs/DD_MM_YYYY_UnitTestBooking.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestBooking.log`
+3 | TestingScripts/UnitTestBookingClass.sh | Runs the unit test for the `class BookingClass`, stores the output at `../Outputs/DD_MM_YYYY_UnitTestBookingClass.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestBookingClass.log`
+4 | TestingScripts/UnitTestDate.sh | Runs the unit test for the `class Date`, stores the output at `../Outputs/DD_MM_YYYY_UnitTestDate.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestDate.log`
+5 | TestingScripts/UnitTestRailways.sh | Runs the unit test for the `class Railways`, stores the output at `../Outputs/DD_MM_YYYY_UnitTestRailways.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestRailways.log`
+6 | TestingScripts/UnitTestStation.sh | Runs the unit test for the `class Station`, stores the output at `../Outputs/DD_MM_YYYY_UnitTestStation.log` and compares it with the golden output present at `../Outputs/GoldenOutput/UnitTestStation.log`
+7 | TestingScripts/customtesting.sh | Runs the file customtesting.cpp which contains a custom test, stores the output at `../Outputs/DD_MM_YYYY_customtesting.log` and compares it with the golden output present at `../Outputs/GoldenOutput/customtesting.log`
 8|Application.cpp| Defines static members of various classes
 9|Booking.cpp| Implements interfaces of `class Booking`
 10|Booking.h| Defines the `class Booking`
@@ -36,27 +36,27 @@ Number | File Name | Content
 1. Compiler Used: g++
 2. C++ Standard Used: c++17
 3. Flags Used
-    1. "-Wshadow"
-    1. "-Wall"
-    1. "-Wextra"
-    1. "-pedantic"
-    1. "-Wformat=2"
-    1. "-Wfloat-equal"
-    1. "-Wconversion"
-    1. "-Wlogical-op"
-    1. "-Wshift-overflow=2"
-    1. "-Wduplicated-cond"
-    1. "-Wcast-qual"
-    1. "-Wcast-align"
-    1. "-Wno-unused-result"
-    1. "-Wno-sign-conversion"
-    1. "-D_GLIBCXX_DEBUG_PEDANTIC"
-    1. "-fno-sanitize-recover=all"
-    1. "-fstack-protector"
-    1. "-D_FORTIFY_SOURCE=2"
-    1. "-fsanitize=address"
-    1. "-fsanitize=undefined"
-    1. "-D_GLIBCXX_DEBUG"
+    1. `-Wshadow`
+    1. `-Wall`
+    1. `-Wextra`
+    1. `-pedantic`
+    1. `-Wformat=2`
+    1. `-Wfloat-equal`
+    1. `-Wconversion`
+    1. `-Wlogical-op`
+    1. `-Wshift-overflow=2`
+    1. `-Wduplicated-cond`
+    1. `-Wcast-qual`
+    1. `-Wcast-align`
+    1. `-Wno-unused-result`
+    1. `-Wno-sign-conversion`
+    1. `-D_GLIBCXX_DEBUG_PEDANTIC`
+    1. `-fno-sanitize-recover=all`
+    1. `-fstack-protector`
+    1. `-D_FORTIFY_SOURCE=2`
+    1. `-fsanitize=address`
+    1. `-fsanitize=undefined`
+    1. `-D_GLIBCXX_DEBUG`
 
 Number | File Name | Command
 | :--- | :--- | :---

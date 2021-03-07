@@ -14,7 +14,7 @@ Number | Header File | Unit Test Implementation
 5| All |`testing.cpp` and `customtesting.cpp`
 
 # Running the Tests
-Go to `../Source/TestingScripts/` and run the relevant bash script, the script compiles the relevant code, runs it, stores it in `../Outputs/` using a `MM_DD_YYYY_<testname>.log` format, after this it checks the output against the golden output provided in `../Outputs/GoldenOutputs/` and tells you if the code passed the unit test 
+Go to `../Source/TestingScripts/` and run the relevant bash script, the script compiles the relevant code, runs it, stores it in `../Outputs/` using a `DD_MM_YYYY_<testname>.log` format, after this it checks the output against the golden output provided in `../Outputs/GoldenOutputs/` and tells you if the code passed the unit test 
 
 # Class-wise Scenario Description
 
