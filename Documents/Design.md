@@ -183,3 +183,104 @@ The following guidelines were adhered to while coding:
         1. `SleepingClass(const int &NumTiers)` : Constructor
         2. `~SleepingClass()` : Destructor
         1. `static void UnitTestSleepingClass()`: Unit Tests this class
+
+### Sitting0Tier (Publicly inherits SittingClass) ###
+1. Methods
+    1. Public:
+        1. `Sitting0Tier()` : Constructor
+        2. `~Sitting0Tier()` : Destructor
+        1. `static void UnitTestSitting0Tier()`: Unit Tests this class
+
+### Sleeping2Tier (Publicly inherits SleepingClass) ###
+1. Methods
+    1. Public:
+        1. `Sleeping2Tier()` : Constructor
+        2. `~Sleeping2Tier()` : Destructor
+        1. `static void UnitTestSleeping2Tier()`: Unit Tests this class
+
+### Sleeping3Tier (Publicly inherits SleepingClass) ###
+1. Methods
+    1. Public:
+        1. `Sleeping3Tier()` : Constructor
+        2. `~Sleeping3Tier()` : Destructor
+        1. `static void UnitTestSleeping3Tier()`: Unit Tests this class
+
+### ACChairCar (Publicly inherits Sitting0Tier) ###
+1. Methods
+    1. Public
+        1. `ACChairCar() : Sitting0Tier() {}` : Constructor
+        1. `~ACChairCar() {}` :Destructor
+        1. `std::string GetName() const override` : implements GetName
+        1. `bool IsAC() const override` :implements AC/NonAC
+        1. `bool IsLuxury() const override`implements Luxury/NonLuxury
+        1. `double GetLoadFactor() const override` implements LoadFactor
+        1. `static const ACChairCar &Type()`:implements singleton
+        1. `static void UnitTestACChairCar()` Unit Tests this class
+### SecondSitting (Publicly inherits Sitting0Tier) ###
+1. Methods
+    1. Public
+        1. `SecondSitting() : Sitting0Tier() {}` : Constructor
+        1. `~SecondSitting() {}` :Destructor
+        1. `std::string GetName() const override` : implements GetName
+        1. `bool IsAC() const override` :implements AC/NonAC
+        1. `bool IsLuxury() const override`implements Luxury/NonLuxury
+        1. `double GetLoadFactor() const override` implements LoadFactor
+        1. `static const SecondSitting &Type()`:implements singleton
+        1. `static void UnitTestSecondSitting()` Unit Tests this class
+### ACFirstClass (Publicly inherits Sleeping2Tier) ###
+1. Methods
+    1. Public
+        1. `ACCFirstClass() : Sleeping2Tier() {}` : Constructor
+        1. `~ACCFirstClass() {}` :Destructor
+        1. `std::string GetName() const override` : implements GetName
+        1. `bool IsAC() const override` :implements AC/NonAC
+        1. `bool IsLuxury() const override`implements Luxury/NonLuxury
+        1. `double GetLoadFactor() const override` implements LoadFactor
+        1. `static const ACCFirstClass &Type()`:implements singleton
+        1. `static void UnitTestACCFirstClass()` Unit Tests this class
+### AC2Tier (Publicly inherits Sleeping2Tier) ###
+1. Methods
+    1. Public
+        1. `AC2Tier() : Sleeping2Tier() {}` : Constructor
+        1. `~AC2Tier() {}` :Destructor
+        1. `std::string GetName() const override` : implements GetName
+        1. `bool IsAC() const override` :implements AC/NonAC
+        1. `bool IsLuxury() const override`implements Luxury/NonLuxury
+        1. `double GetLoadFactor() const override` implements LoadFactor
+        1. `static const AC2Tier &Type()`:implements singleton
+        1. `static void UnitTestAC2Tier()` Unit Tests this class
+
+### FirstClass (Publicly inherits Sleeping2Tier) ###
+1. Methods
+    1. Public
+        1. `FirstClass() : Sleeping2Tier() {}` : Constructor
+        1. `~FirstClass() {}` :Destructor
+        1. `std::string GetName() const override` : implements GetName
+        1. `bool IsAC() const override` :implements AC/NonAC
+        1. `bool IsLuxury() const override`implements Luxury/NonLuxury
+        1. `double GetLoadFactor() const override` implements LoadFactor
+        1. `static const FirstClass &Type()`:implements singleton
+        1. `static void UnitTestFirstClass()` Unit Tests this class
+
+### AC3Tier (Publicly inherits Sleeping3Tier) ###
+1. Methods
+    1. Public
+        1. `AC3Tier() : Sleeping3Tier() {}` : Constructor
+        1. `~AC3Tier() {}` :Destructor
+        1. `std::string GetName() const override` : implements GetName
+        1. `bool IsAC() const override` :implements AC/NonAC
+        1. `bool IsLuxury() const override`implements Luxury/NonLuxury
+        1. `double GetLoadFactor() const override` implements LoadFactor
+        1. `static const AC3Tier &Type()`:implements singleton
+        1. `static void UnitTestAC3Tier()` Unit Tests this class
+### Sleeper (Publicly inherits Sleeping3Tier) ###
+1. Methods
+    1. Public
+        1. `Sleeper() : Sleeping3Tier() {}` : Constructor
+        1. `~Sleeper() {}` :Destructor
+        1. `std::string GetName() const override` : implements GetName
+        1. `bool IsAC() const override` :implements AC/NonAC
+        1. `bool IsLuxury() const override`implements Luxury/NonLuxury
+        1. `double GetLoadFactor() const override` implements LoadFactor
+        1. `static const Sleeper &Type()`:implements singleton
+        1. `static void UnitTestSleeper()` Unit Tests this class
