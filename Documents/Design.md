@@ -43,48 +43,47 @@ The following guidelines were adhered to while coding:
 
 ## Booking ##
 1. Static Members
-    1. sBaseFarePerKM : `static double` , used in fare calculation, initialised in `Application.cpp`
-    1. sACSurcharge : `static double`,  used in fare calculation, initialised in `Application.cpp`
-    1. sLuxuryTaxPercent : `static double` ,  used in fare calculation, initialised in `Application.cpp`
-    1. sBookingPNRSerial : `static int` shared by all bookings to generate PNR
-    1. sBookings : `static vector<Booking *>` vector storing all bookings made
+    1. Private:
+        1.  `static double sBaseFarePerKM` , used in fare calculation, initialised in `Application.cpp`
+        1.  `static double sACSurcharge`,  used in fare calculation, initialised in `Application.cpp`
+        1.  `static double sLuxuryTaxPercent` ,  used in fare calculation, initialised in `Application.cpp`
+        1.  `static int sBookingPNRSerial` shared by all bookings to generate PNR
+    1. Public:
+        1.   `static vector<Booking *> sBookings` vector storing all bookings made
 2. Non Static Members
-    1. Pnr_ :  `int` , Pnr of the booking
-    1. BookingMessage_ :  `string`, booking message
-    1. Fare_ : `int`, fare
-    1. BookingStatus_ :  `boolean`, status
-    1. FromStation_: `Station`, source station
-    1. ToStation_ :`Station`, destination
-    1. Date_ :  `Date`, date of travel
-    1. BookingClass_ :  `const BookingClass&`, type of booking
-    1. Passenger_:  `const Person*`
+    1. Private:
+        1. `int Pnr_` , Pnr of the booking
+        1.    `string BookingMessage_`, booking message
+        1.  `int Fare_ `, fare
+        1.  `boolean BookingStatus_`, status
+        1.  `Station FromStation_`, source station
+        1. `Station ToStation_ `, destination
+        1.  `Date Date_ `, date of travel
+        1.   `const BookingClass& BookingClass_ `, type of booking
+        1.  `const Person* Passenger_`
 2. Methods
-    1. Booking(): Constructor
-    1. ~Booking(): Destructor
-    1. ComputeFare() : computes fare and stores it in Fare_ <br>
-        Return - void  <br>
-        Params - None <br>
-        Access - public 
-    1. UnitTestBooking(): `static`, implements unit test  <br>
-        Return - void <br>
-        Params - None <br>
-        Access - public
-    1. operator<< : `friend` function, implements output stream  <br>
-        Return - ostream & <br>
-        Params - ostream &, const Booking &
+    1. Public:
+        1.  `Booking(const Station &, const Station &, const Date &, const BookingClass &, const Person * = NULL)` Constructor
+        1. `~Booking()` Destructor
+        1. `void ComputeFare()` computes fare and stores it in Fare_  
+        1. `friend std::ostream &operator<<(std::ostream &, const Booking &)`implements output stream 
+        1. `static void UnitTestBooking()`   implements unit test  
+        
 
 ## Station ##
 1. Non Static Members:
-    1. Name_: `std::string`, name of the station
+    1. Private:
+        1. `std::string Name_` : name of the station
 2. Methods: 
-    1. `Station(const std::string &)` : Constructor 
-    1. `Station(const Station &)` : Copy constructor
-    1. `~Station()` : Destructor
-    1. `std::string GetName() const` : returns Name_
-    1. `friend std::ostream &operator<<(std::ostream &, const Station &)` : implements output stream
-    1. `double GetDistance(const std::string &) const ` : returns distance between 2 stations
-    1. `double GetDistance(const Station &) const` : returns distance between 2 stations
-    1. `static void UnitTestStation()` : implements unit test
+    1. Public:
+        1. `Station(const std::string &)` : Constructor 
+        1. `Station(const Station &)` : Copy constructor
+        1. `~Station()` : Destructor
+        1. `std::string GetName() const` : returns Name_
+        1. `friend std::ostream &operator<<(std::ostream &, const Station &)` : implements output stream
+        1. `double GetDistance(const std::string &) const ` : returns distance between 2 stations
+        1. `double GetDistance(const Station &) const` : returns distance between 2 stations
+        1. `static void UnitTestStation()` : implements unit test
 
 ## Date ##
 1. Static Members:
@@ -113,8 +112,8 @@ The following guidelines were adhered to while coding:
     1. Private:
         1. `static std::vector<Station> InitSta()` : initialise stations
         1. `static std::map<std::pair<std::string, std::string>, double> InitDis()` : initialises distances between stations
-        1. `Railways()` : private constructor for singleton
-        1. `~Railways()`: private destructor for singleton
+        1. `Railways()` : constructor for singleton
+        1. `~Railways()`: destructor for singleton
     2. Public: 
         1. `Railways(Railways &) = delete` : c++11 code
         1. `void operator=(const Railways &) = delete` : c++11 code 
