@@ -85,3 +85,21 @@ The following guidelines were adhered to while coding:
     1. `double GetDistance(const std::string &) const ` : returns distance between 2 stations
     1. `double GetDistance(const Station &) const` : returns distance between 2 stations
     1. `static void UnitTestStation()` : implements unit test
+
+## Date ##
+1. Static Members:
+    1. `static const std::vector<std::string> sDays` : vector of strings with day names
+    1. `static const std::vector<std::string> sMonths` : vector of strings with month names
+2. Non Static Members:
+    1. `unsigned int date_` : DD part of the date object
+    1. `unsigned int month_` : MM part of the date object
+    1. `unsigned int year_` :YYYY part of the date object
+3. Methods: 
+    1. `Date(unsigned int, unsigned int, unsigned int)`: Constructor
+    1. `Date(const Date &)` : Copy Constructor
+    1. `~Date()` : Destructor
+    1. `friend std::ostream &operator<<(std::ostream &, const Date &)` : implements output streaming
+    1. `static void UnitTestDate()`: implements unit test
+
+
+
